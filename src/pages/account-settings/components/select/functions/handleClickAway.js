@@ -1,0 +1,1 @@
+export const handleClickAway = (setOpenSelect) => setOpenSelect(false)
