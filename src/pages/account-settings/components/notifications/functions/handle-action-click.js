@@ -1,0 +1,1 @@
+export const handleActionClick = (setter, value) => setter(value)

@@ -11,16 +11,9 @@ import { handleSelectItemClicked } from "./functions/handleSelectItemClicked";
 import ClickAwayListener from "react-advanced-click-away";
 import { handleClickAway } from "./functions/handleClickAway";
 
-export const Select = () => {
+export const Select = ({settingList}) => {
   const [selectedIndex, setSelectedIndex] = useState(2);
   const [openSelect, setOpenSelect] = useState(false);
-  const settingList = [
-    "Profile & branding",
-    "Users",
-    "Notifications",
-    "Subscription",
-    "Questionnaires",
-  ];
 
   return (
     <>
@@ -79,7 +72,7 @@ const CurrentSelect = styled.div`
   border: ${(props) =>
     props.clicked ? "none" : `1.5px ${Colors.faint} solid`};
   color: ${(props) => (props.clicked ? Colors.white : Colors.buttonText)};
-  padding: 15px;
+  padding: 10px;
   width: 100%;
   cursor: pointer;
   border-radius: ${borderRadius};
@@ -91,7 +84,7 @@ const SelectItem = styled(motion.div)`
   /* background-color: ${Colors.buttonText}; */
   border: ${`1.5px ${Colors.faint} solid`};
   color: ${Colors.text};
-  padding: 15px;
+  padding: 10px;
   width: 100%;
   cursor: pointer;
   border-radius: ${borderRadius};
